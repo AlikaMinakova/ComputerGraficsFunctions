@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<AnchorPane minWidth="1000.0" minHeight="800.0"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.cgvsu.protocurvefxapp.FunctionController">
+    <children>
+        <AnchorPane minWidth="1000.0" minHeight="800.0">
+            <children>
+                <AreaChart fx:id="areaGraph"  minWidth="1000.0" minHeight="800.0">
+                    <!-- оси - черыне полосочки -->
+                    <!-- autoRanging - где х там и подпись оси -->
+                    <!--tickUnit="1" - размер сетки-->
+                    <xAxis>
+                        <NumberAxis autoRanging="false" lowerBound="-20" tickUnit="1" upperBound="20" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis autoRanging="false" lowerBound="-20"  tickUnit="1" upperBound="20" />
+                    </yAxis>
+                </AreaChart>
+                <Button layoutX="650.0" onAction="#create" layoutY="800.0" text="Построить" />
+                <TextField fx:id="textField" layoutX="20.0" layoutY="800.0" minWidth="600"> </TextField>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
